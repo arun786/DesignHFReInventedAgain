@@ -5,12 +5,8 @@
     Program to an interface, not an Implementation.
     
     
-![Fly Behavior]()
-    
-    
-    
-    
-    
+![Fly Behavior](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/FlyWithBehavior.png)
+        
     public interface FlyBehavior {
         void fly();
     }

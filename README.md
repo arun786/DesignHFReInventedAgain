@@ -26,8 +26,8 @@
         }
     }
     
-    
-    
+
+![Quack Behavior](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/QB.png)
     
     
     public interface QuackBehavior {
@@ -56,3 +56,32 @@
             System.out.println("Duck cant quack");
         }
     }
+    
+    
+![Duck class](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/duck.png)
+
+
+    public abstract class Duck {
+        protected FlyBehavior flyBehaviour;
+        protected QuackBehavior quackBehavior;
+    
+        public abstract void display();
+    
+        public void performFly() {
+            flyBehaviour.fly();
+        }
+    
+        public void performQuack() {
+            quackBehavior.Quack();
+        }
+    
+        public void swim() {
+            System.out.println("All ducks swim");
+        }
+    }
+
+
+
+
+
+![Duck class with Interfaces](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/full.png)

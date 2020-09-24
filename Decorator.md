@@ -1,5 +1,6 @@
 # Decorator Pattern
 
+![Decorator Pattern](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/decorator.png)
 
     package com.arun.designpattern.decoratorpattern;
     

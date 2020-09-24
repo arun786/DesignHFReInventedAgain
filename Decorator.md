@@ -2,6 +2,8 @@
 
 ![Decorator Pattern](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/decorator.png)
 
+
+![class Diagram](https://github.com/arun786/DesignHFReInventedAgain/blob/master/src/main/resources/image/DecoratorPattern.png)
     package com.arun.designpattern.decoratorpattern;
     
     /**

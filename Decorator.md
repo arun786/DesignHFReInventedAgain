@@ -112,3 +112,71 @@
             return " + Tofu";
         }
     }
+
+
+# String decorator
+
+Since String class is final we cannot inherit the methods, so we can delegate all the methods
+
+of String class and add a new functionality to the new class, in this case it checks the
+
+number of vowels in a string.
+
+    package com.arun.designpattern.decoratorpattern;
+    
+    import java.io.UnsupportedEncodingException;
+    import java.nio.charset.Charset;
+    import java.util.Locale;
+    import java.util.stream.IntStream;
+    import java.util.stream.Stream;
+    
+    /**
+     * @author arun on 9/25/20
+     */
+    
+    public class StringDecorator {
+    
+        public static void main(String[] args) {
+            MagicString magicString = new MagicString("hello");
+            System.out.println("Number of vowels : " + magicString.countNoOfVowels());
+        }
+    
+    
+    }
+    
+    class MagicString {
+        private final String string;
+    
+        public MagicString(String string) {
+            this.string = string;
+        }
+    
+        //create a method which will count the number of vowels in a string
+    
+        public long countNoOfVowels() {
+            return string.chars().mapToObj(c -> (char) c).filter(c -> "aeiou".contains(c.toString())).count();
+        }
+    
+        @Override
+        public String toString() {
+            return string;
+        }
+    
+        //delegated methods
+    
+        public int length() {
+            return string.length();
+        }
+    
+        public boolean isEmpty() {
+            return string.isEmpty();
+        }
+    
+        public char charAt(int index) {
+            return string.charAt(index);
+        }
+    
+        public int codePointAt(int index) {
+            return string.codePointAt(index);
+        }
+    }
